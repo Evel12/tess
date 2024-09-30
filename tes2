@@ -1,0 +1,250 @@
+package Proyek;
+
+// Interface Gender yang merupakan turunan dari lokasi
+interface Gender {
+    void displayInfo();
+}
+
+// Kelas Karyawan sebagai kelas dasar
+abstract class Karyawan {
+    protected String nama;
+
+    public Karyawan(String nama) {
+        this.nama = nama;
+    }
+
+    public abstract void displayInfo();
+}
+
+// Kelas Direktur, Manajer, dan Staf merupakan turunan dari Karyawan
+abstract class Direktur extends Karyawan {
+    public Direktur(String nama) {
+        super(nama);
+    }
+}
+
+abstract class Manajer extends Karyawan {
+    public Manajer(String nama) {
+        super(nama);
+    }
+}
+
+abstract class Staf extends Karyawan {
+    public Staf(String nama) {
+        super(nama);
+    }
+}
+
+// Kelas Lokasi yang merupakan turunan dari Direktur, Manajer, dan Staf
+abstract class LokasiDirektur extends Direktur {
+    public LokasiDirektur(String nama) {
+        super(nama);
+    }
+}
+
+abstract class LokasiManajer extends Manajer {
+    public LokasiManajer(String nama) {
+        super(nama);
+    }
+}
+
+abstract class LokasiStaf extends Staf {
+    public LokasiStaf(String nama) {
+        super(nama);
+    }
+}
+
+// Kelas untuk Jakarta dan Semarang
+abstract class JakartaDirektur extends LokasiDirektur {
+    public JakartaDirektur(String nama) {
+        super(nama);
+    }
+}
+
+abstract class SemarangDirektur extends LokasiDirektur {
+    public SemarangDirektur(String nama) {
+        super(nama);
+    }
+}
+
+abstract class JakartaManajer extends LokasiManajer {
+    public JakartaManajer(String nama) {
+        super(nama);
+    }
+}
+
+abstract class SemarangManajer extends LokasiManajer {
+    public SemarangManajer(String nama) {
+        super(nama);
+    }
+}
+
+abstract class JakartaStaf extends LokasiStaf {
+    public JakartaStaf(String nama) {
+        super(nama);
+    }
+}
+
+abstract class SemarangStaf extends LokasiStaf {
+    public SemarangStaf(String nama) {
+        super(nama);
+    }
+}
+
+// Kelas turunan untuk Gender (Pria dan Wanita) di setiap lokasi dan posisi
+class SemarangDirekturPria extends SemarangDirektur implements Gender {
+    public SemarangDirekturPria(String nama) {
+        super(nama);
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println(nama + " bekerja sebagai direktur di Semarang dan bergender Pria");
+    }
+}
+
+class SemarangDirekturWanita extends SemarangDirektur implements Gender {
+    public SemarangDirekturWanita(String nama) {
+        super(nama);
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println(nama + " bekerja sebagai direktur di Semarang dan bergender Wanita");
+    }
+}
+
+class JakartaDirekturPria extends JakartaDirektur implements Gender {
+    public JakartaDirekturPria(String nama) {
+        super(nama);
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println(nama + " bekerja sebagai direktur di Jakarta dan bergender Pria");
+    }
+}
+
+class JakartaDirekturWanita extends JakartaDirektur implements Gender {
+    public JakartaDirekturWanita(String nama) {
+        super(nama);
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println(nama + " bekerja sebagai direktur di Jakarta dan bergender Wanita");
+    }
+}
+
+class SemarangManajerPria extends SemarangManajer implements Gender {
+    public SemarangManajerPria(String nama) {
+        super(nama);
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println(nama + " bekerja sebagai manajer di Semarang dan bergender Pria");
+    }
+}
+
+class SemarangManajerWanita extends SemarangManajer implements Gender {
+    public SemarangManajerWanita(String nama) {
+        super(nama);
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println(nama + " bekerja sebagai manajer di Semarang dan bergender Wanita");
+    }
+}
+
+class JakartaManajerPria extends JakartaManajer implements Gender {
+    public JakartaManajerPria(String nama) {
+        super(nama);
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println(nama + " bekerja sebagai manajer di Jakarta dan bergender Pria");
+    }
+}
+
+class JakartaManajerWanita extends JakartaManajer implements Gender {
+    public JakartaManajerWanita(String nama) {
+        super(nama);
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println(nama + " bekerja sebagai manajer di Jakarta dan bergender Wanita");
+    }
+}
+
+class SemarangStafPria extends SemarangStaf implements Gender {
+    public SemarangStafPria(String nama) {
+        super(nama);
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println(nama + " bekerja sebagai staf di Semarang dan bergender Pria");
+    }
+}
+
+class SemarangStafWanita extends SemarangStaf implements Gender {
+    public SemarangStafWanita(String nama) {
+        super(nama);
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println(nama + " bekerja sebagai staf di Semarang dan bergender Wanita");
+    }
+}
+
+class JakartaStafPria extends JakartaStaf implements Gender {
+    public JakartaStafPria(String nama) {
+        super(nama);
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println(nama + " bekerja sebagai staf di Jakarta dan bergender Pria");
+    }
+}
+
+class JakartaStafWanita extends JakartaStaf implements Gender {
+    public JakartaStafWanita(String nama) {
+        super(nama);
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println(nama + " bekerja sebagai staf di Jakarta dan bergender Wanita");
+    }
+}
+
+public class mainproyek {
+    public static void main(String[] args) {
+        // Menggunakan polimorfisme dan antarmuka
+        Gender[] karyawan = {
+            new SemarangDirekturPria("Budi"),
+            new SemarangDirekturWanita("Siti"),
+            new SemarangStafPria("Andi"),
+            new SemarangStafWanita("Rina"),
+            new SemarangManajerPria("Joko"),
+            new SemarangManajerWanita("Dewi"),
+            new JakartaDirekturPria("Ali"),
+            new JakartaDirekturWanita("Nina"),
+            new JakartaStafPria("Fajar"),
+            new JakartaStafWanita("Lina"),
+            new JakartaManajerPria("Tommy"),
+            new JakartaManajerWanita("Sari")
+        };
+
+        // Loop untuk menampilkan informasi menggunakan metode displayInfo()
+        for (Gender g : karyawan) {
+            g.displayInfo();  // Polimorfisme terjadi di sini
+        }
+    }
+}
