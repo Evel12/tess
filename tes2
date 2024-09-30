@@ -259,7 +259,7 @@ class SemarangManajerPria extends SemarangManajer implements Gender {
     }
 
     public void displayInfo() {
-        System.out.println(nama + "bekerja sebagai manajer di Semarang dan bergender pria");
+        System.out.println(nama + " bekerja sebagai manajer di Semarang dan bergender pria");
     }
 
     public String getPosition() {
@@ -281,7 +281,7 @@ class SemarangManajerWanita extends SemarangManajer implements Gender {
     }
 
     public void displayInfo() {
-        System.out.println(nama + "bekerja sebagai manajer di Semarang dan bergender wanita");
+        System.out.println(nama + " bekerja sebagai manajer di Semarang dan bergender wanita");
     }
 
     public String getPosition() {
